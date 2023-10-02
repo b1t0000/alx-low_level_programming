@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	while (i < argc)
 	{
 		j = atoi(argv[i]);
-		c = *argv[i];
+		c = **argv;
 		if (j == 0 && c != '0')
 		{
 			printf("Error\n");
