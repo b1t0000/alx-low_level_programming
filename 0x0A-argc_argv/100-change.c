@@ -17,6 +17,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	cent = atoi(argv[1]);
+	if (cent < 0)
+	{
+		printf ("%d\n", 0);
+		return (0);
+	}
 	c = cent % 25;
 	coins = cent / 25;
 	cc = c % 10;
@@ -26,7 +31,6 @@ int main(int argc, char *argv[])
 	cccc = ccc % 2;
 	coins += ccc / 2;
 	coins += cccc;
-
 	printf("%d\n", coins);
 	return (0);
 }
