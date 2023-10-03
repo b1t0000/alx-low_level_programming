@@ -14,6 +14,9 @@ int main(int argc, char *argv[])
 	while (i < argc)
 	{
 		j = atoi(argv[i]);
+		if (j < 0)
+			return (0);
+		if 
 		c = **argv;
 		if (j == 0 && c != '0')
 		{
