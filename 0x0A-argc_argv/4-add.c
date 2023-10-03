@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		if (j == 0)
 		{
 			c = *argv[i];
-			if (c != 48)
+			if (c != 45 && c !=48)
 			{
 				printf("Error\n");
 				return (1);
