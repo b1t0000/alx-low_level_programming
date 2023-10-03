@@ -12,12 +12,18 @@ char *str_concat(char *s1, char *s2)
 	char *con;
 
 	if (s1 == NULL && s2 == NULL)
-		return (NULL);
-	while (s1[i])
-		i++;
-	while (s2[j])
-		j++;
-	k = i + j;
+		return;
+	if (s1)
+	{
+		while (s1[i])
+			i++;
+	}
+	if (s2)
+	{
+		while (s2[j])
+			j++;
+	}
+	k = i + j + 1;
 	con = malloc(sizeof(char) * k);
 	if (con == NULL)
 	{
