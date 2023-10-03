@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
 	while (i < argc)
 	{
 		j = atoi(argv[i]);
-		c = **argv;
-		if (j == 0 && c != '0')
+		c = *argv[1];
+		if (j == 0 && c != 48)
 		{
 			printf("Error\n");
 			return (1);
