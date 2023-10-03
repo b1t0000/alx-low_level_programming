@@ -14,11 +14,14 @@ int main(int argc, char *argv[])
 	while (i < argc)
 	{
 		j = atoi(argv[i]);
-		c = *argv[1];
-		if (j == 0 && c != 48)
+		if (j == 0)
 		{
-			printf("Error\n");
-			return (1);
+			c = *argv[i];
+			if (c != 48)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 		sum += j;
 		i++;
