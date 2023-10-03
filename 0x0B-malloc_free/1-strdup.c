@@ -1,4 +1,5 @@
 #include "main.h"
+#include "stdio.h"
 /**
  * _strdup - copy string in new memory
  * @str: string
@@ -11,11 +12,11 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	while (str[i] != '\n')
+	while (str[i])
 	{
 		i++;
 	}
-	new = malloc(i - 1);
+	new = malloc(sizeof(char) * i);
 	if (new == NULL)
 	{
 		free(new);
