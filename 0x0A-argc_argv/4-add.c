@@ -1,6 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * is_digit - check
+ * @s: string
+ * Return: 1 or 0;
+ */
+int is_digit(char *s)
+{
+	if (s[0] == '0')
+		return (0);
+	else
+		return (1);
+}
+/**
  * main - main function
  * @argc: number of argument
  * @argv: array of arguments
@@ -9,21 +21,16 @@
 int main(int argc, char *argv[])
 {
 	int j, i = 1, sum = 0;
-	char c;
-
+	
 	while (i < argc)
 	{
 		j = atoi(argv[i]);
 		if (j == 0)
 		{
-			c = *argv[i];
-			if (c == 45 || c != 48)
+			if (is_digit(argv[i]))
 			{
-				if (*argv[i + 1] != 48)
-				{
-					printf("Error\n");
-					return (0);
-				}
+				printf("Error\n");
+				return (0);
 			}
 		}
 		sum += j;
