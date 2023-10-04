@@ -21,7 +21,6 @@ int is_digit(char *s)
 int main(int argc, char *argv[])
 {
 	int j, i = 1, sum = 0;
-	
 	while (i < argc)
 	{
 		j = atoi(argv[i]);
