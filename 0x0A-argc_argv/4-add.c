@@ -7,7 +7,7 @@
  */
 int is_digit(char *s)
 {
-	if (s[0] == '0')
+	if ((s[0] == '-' && s[1] == '0') || s[0] == '0')
 		return (0);
 	else
 		return (1);
@@ -21,6 +21,7 @@ int is_digit(char *s)
 int main(int argc, char *argv[])
 {
 	int j, i = 1, sum = 0;
+	
 	while (i < argc)
 	{
 		j = atoi(argv[i]);
