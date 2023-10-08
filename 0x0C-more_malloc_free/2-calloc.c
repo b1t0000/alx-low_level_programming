@@ -7,15 +7,17 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *cal;
-	unsigned int i;
+	char *cal, c;
+	unsigned int i, s;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	cal = malloc(nmemb * size);
+	s = nmemb * size;
+	c = 0;
+	cal = malloc(s);
 	if (!cal)
 		return (NULL);
-	for (i = 0; i < nmemb * size; i++)
-		cal[i] ='0';
+	for (i = 0; i < s; i++)
+		cal[i] = c;
 	return (cal);
 }
