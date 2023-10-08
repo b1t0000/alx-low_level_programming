@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * array_range : array range
+ * array_range - array range
  * @min: min value
  * @max: max value
  * Return: pointer
