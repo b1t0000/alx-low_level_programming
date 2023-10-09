@@ -19,9 +19,5 @@ struct dog
 	 * Description: longer description
 	 */
 };
-/**
- * dog - Typedef for dog
- */
-typedef dog dog;
-
+void init_dog(struct dog *d, char *name, float age, char *owner);
 #endif
