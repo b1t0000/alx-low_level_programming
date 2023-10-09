@@ -13,6 +13,9 @@ struct dog
 	char *name;
 	float age;
 	char *owner;
+	/**
+	 * Description: longer description
+	 */
 };
 /**
  * dog - Typedef for dog
