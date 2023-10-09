@@ -6,6 +6,8 @@
  * @name: nampe
  * @age: age
  * @owner: owner
+ *
+ * Description: Longer Description
  */
 
 struct dog
