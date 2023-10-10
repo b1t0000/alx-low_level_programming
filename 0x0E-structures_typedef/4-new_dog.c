@@ -16,6 +16,7 @@ char *_copy(char *pst, char *cp)
 	{
 		pst[j] = cp[j];
 	}
+	pst[j] = '\0';
 	return (pst);
 }
 /**
