@@ -12,7 +12,7 @@ char *_copy(char *pst, char *cp)
 
 	while (cp[i] != '\0')
 		i++;
-	for (j = 0; j <= i; j++)
+	for (j = 0; j < i; j++)
 	{
 		pst[j] = cp[j];
 	}
