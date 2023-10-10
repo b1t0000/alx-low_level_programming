@@ -19,7 +19,6 @@ char *_copy(char *pst, char *cp)
 	pst[j] = '\n';
 	return (pst);
 }
-
 /**
  * new_dog - new dog
  * @name: name
@@ -39,14 +38,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 		i++;
 	while (owner[j] != '\n')
 		j++;
-	new->name = malloc(i + 1);
+	new->name = malloc(i + 2);
 	if (new->name == NULL)
 	{
 		free(new->name);
 		free(new);
 		return (NULL);
 	}
-	new->owner = malloc(j + 1);
+	new->owner = malloc(j + 2);
 	if (new->owner == NULL)
 	{
 		free(new->owner);
@@ -54,7 +53,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	_copy(new->name, name);
-	_copy(new->owner, owner);
 	new->age = age;
+	_copy(new->owner, owner);
 	return (new);
 }
