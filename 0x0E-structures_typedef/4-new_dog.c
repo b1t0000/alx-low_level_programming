@@ -38,13 +38,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		i++;
 	while (owner[j] != '\n')
 		j++;
-	new->name = malloc(i + 2);
+	new->name = malloc(i);
 	if (new->name == NULL)
 	{
 		free(new);
 		return (NULL);
 	}
-	new->owner = malloc(j + 2);
+	new->owner = malloc(j);
 	if (new->owner == NULL)
 	{
 		free(new);
