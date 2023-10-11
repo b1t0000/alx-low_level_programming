@@ -10,6 +10,9 @@ char *_copy(char *pst, char *cp)
 {
 	int i = 0, j;
 
+	if (pst == NULL)
+		return NULL;
+
 	while (cp[i] != '\0')
 		i++;
 	for (j = 0; j < i; j++)
