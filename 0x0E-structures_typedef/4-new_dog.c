@@ -10,9 +10,6 @@ char *_copy(char *pst, char *cp)
 {
 	int i = 0, j;
 
-	if (pst == NULL)
-		return NULL;
-
 	while (cp[i] != '\0')
 		i++;
 	for (j = 0; j < i; j++)
@@ -47,15 +44,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new->name = malloc(sizeof(char) * (i + 1));
 	if (new->name == NULL)
 	{
-		free(new->name);
 		free(new);
 		return (NULL);
 	}
 	new->owner = malloc(sizeof(char) * (j + 1));
 	if (new->owner == NULL)
 	{
-		free(new->owner);
-		free(new);
+		free(new)
+		free(new->name);
 		return (NULL);
 	}
 	_copy(new->name, name);
