@@ -7,7 +7,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	char *x;
+	char *x, *sp = "";
 	int i = 0;
 
 	va_start(args, format);
@@ -27,7 +27,7 @@ void print_all(const char * const format, ...)
 			case 's':
 				x = va_arg(args, char *);
 				if (x == NULL)
- 					x = "(nil)";
+					x = "(nil)";
 				printf("%s", x);
 				break;
 			default:
