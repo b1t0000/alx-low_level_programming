@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 			sp = ", ";
 			i++;
 		}
-		printf("\n");
 	}
+	printf("\n");
 	va_end(args);
 }
